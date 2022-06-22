@@ -41,9 +41,9 @@ if(x==1){
 	session.setAttribute("sessionID", id);
 	msg="../MainForm.jsp";	
 }else if(x==0){
-	msg="loginform.jsp?msg=0";
+	msg="loginform.do?msg=0";
 }else{
-	msg="loginform.jsp?msg=-1";
+	msg="loginform.do?msg=-1";
 }
 
 response.sendRedirect(msg);

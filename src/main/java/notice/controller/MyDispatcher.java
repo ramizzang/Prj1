@@ -16,6 +16,7 @@ import notice.controller.customer.NoticeEditProcController;
 import notice.controller.customer.NoticeRegController;
 import notice.controller.customer.NoticeRegProcController;
 import notice.controller.login.LoginController;
+import notice.controller.login.LoginProcController;
 
 public class MyDispatcher extends HttpServlet{
 	
@@ -54,6 +55,8 @@ public class MyDispatcher extends HttpServlet{
 				controller=new NoticeController();
 			}else if(com.equals("/login/login.do")) {
 				controller=new LoginController();
+			}else if(com.equals("/login/loginproc.do")) {
+				controller=new LoginProcController();
 			}
 			controller.execute(request, response);
 			
