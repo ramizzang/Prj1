@@ -20,6 +20,15 @@ function clearVal() {
 }
 </script>
 
+<a href="../login/login.do">login</a>
+<a href="../login/logoutproc.do">logout</a>
+
+<br />
+${sessionScope.uid }님 반값습니다.
+
+<hr />
+
+
 <form action="notice.do" method="get">
 	<select name="f">
 		<option ${param.f=="title"?"selected":"" } value="title">제목</option>
