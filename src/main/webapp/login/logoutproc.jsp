@@ -13,7 +13,7 @@ request.setCharacterEncoding("utf-8");
 <h3>logoutproc.jsp</h3>
 <%
 session.invalidate();
-response.sendRedirect("loginform.jsp");
+response.sendRedirect("loginform.do");
 
 %>
 </body>

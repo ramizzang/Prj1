@@ -19,12 +19,18 @@ function clearVal() {
 	inputval.value="";
 }
 </script>
+<c:if test="${empty sessionScope.uid }">
+	<a href="../login/login.do">login</a>
+	<a href="../joinus/join.jsp">join</a>
+	로그인 or 가입해주세요.
+</c:if>
 
-<a href="../login/login.do">login</a>
-<a href="../login/logoutproc.do">logout</a>
+<c:if test="${not empty sessionScope.uid }">
+	<a href="../login/logoutproc.do">logout</a>
+	${sessionScope.uid }님 반값습니다.
+</c:if>
 
 <br />
-${sessionScope.uid }님 반값습니다.
 
 <hr />
 
